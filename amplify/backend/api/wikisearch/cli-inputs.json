@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "paths": {
+    "/wiki/search": {
+      "name": "/wiki/search",
+      "lambdaFunction": "wikipidasearch1",
+      "permissions": {
+        "setting": "open"
+      }
+    }
+  }
+}

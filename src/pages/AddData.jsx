@@ -1,35 +1,50 @@
+import axios from "axios";
 import jsonp from "jsonp";
 import React from "react";
 import { useForm } from "react-hook-form";
 
 const AddData = () => {
   const { register, handleSubmit } = useForm();
-let words=''
-  const onSubmit = (data) => {
-    const apiEndpoint = "https://en.wikipedia.org/w/api.php";
-    const params = {
-      action: "query",
-      list: "search",
-      srsearch: data.wikiTitle,
-      format: "json",
-    };
+  const onSubmit = async (data) => {
+    try {
+        // Assuming `data` is an object you want to send in the POST request
+        let response = await axios.post('https://4x7ragl0a0.execute-api.us-east-1.amazonaws.com/dev/wiki/search', data);
 
-    jsonp(
-      apiEndpoint + "?" + new URLSearchParams(params),
-      null,
-      (err, response) => {
-        if (err) {
-          console.error(err);
-        } else {
-          //   const pages = response.query.random;
-          //   pages.forEach(page => {
-          console.log(response.query);
-          // words=response.query.search[0].snippet
-          //   });
-        }
-      }
-    );
-  };
+        // Handle the response data here
+        console.log(response.data);
+    } catch (error) {
+        // Handle errors here
+        console.error(error);
+    }
+};
+
+  // const onSubmit = async (data) => {
+  //   let response= await axios.post('https://4x7ragl0a0.execute-api.us-east-1.amazonaws.com/dev/wiki/search')
+  //   console.log(response);
+  //   // const apiEndpoint = "https://en.wikipedia.org/w/api.php";
+  //   // const params = {
+  //   //   action: "query",
+  //   //   list: "search",
+  //   //   srsearch: data.wikiTitle,
+  //   //   format: "json",
+  //   // };
+
+  //   // jsonp(
+  //   //   apiEndpoint + "?" + new URLSearchParams(params),
+  //   //   null,
+  //   //   (err, response) => {
+  //   //     if (err) {
+  //   //       console.error(err);
+  //   //     } else {
+  //   //       //   const pages = response.query.random;
+  //   //       //   pages.forEach(page => {
+  //   //       // console.log(response.query);
+  //   //       // words=response.query.search[0].snippet
+  //   //       //   });
+  //   //     }
+  //   //   }
+  //   // );
+  // };
 
   return (
     <div
@@ -123,7 +138,7 @@ let words=''
           <button type="submit">Submit</button>
         </form>
       </div>
-      <h1>{words}</h1>
+
     </div>
   );
 };

@@ -1,0 +1,43 @@
+{
+  "api": {
+    "wikisearch": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "wikipidasearch1"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
+  "function": {
+    "wikipidasearch1": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_wikipidasearch1_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "wikipidasearch1"
+        }
+      ]
+    },
+    "AMPLIFY_function_wikipidasearch1_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "wikipidasearch1"
+        }
+      ]
+    }
+  }
+}

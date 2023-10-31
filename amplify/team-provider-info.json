@@ -1,0 +1,26 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-wikipidiasearch1-dev-190055-authRole",
+      "UnauthRoleArn": "arn:aws:iam::373752731254:role/amplify-wikipidiasearch1-dev-190055-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::373752731254:role/amplify-wikipidiasearch1-dev-190055-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-wikipidiasearch1-dev-190055-deployment",
+      "UnauthRoleName": "amplify-wikipidiasearch1-dev-190055-unauthRole",
+      "StackName": "amplify-wikipidiasearch1-dev-190055",
+      "StackId": "arn:aws:cloudformation:us-east-1:373752731254:stack/amplify-wikipidiasearch1-dev-190055/e8da7d70-77f5-11ee-96f1-129a67850695",
+      "AmplifyAppId": "d2ec6whuvenwin"
+    },
+    "categories": {
+      "function": {
+        "wikipidasearch1": {
+          "deploymentBucketName": "amplify-wikipidiasearch1-dev-190055-deployment",
+          "s3Key": "amplify-builds/wikipidasearch1-6d4a5776532b6e35766f-build.zip"
+        }
+      },
+      "api": {
+        "wikisearch": {}
+      }
+    }
+  }
+}
