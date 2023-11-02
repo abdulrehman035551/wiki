@@ -1,50 +1,42 @@
 import axios from "axios";
 import jsonp from "jsonp";
-import React from "react";
+import React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
+import { Navigate, useNavigate } from "react-router-dom";
 
 const AddData = () => {
+  const navigate = useNavigate();
   const { register, handleSubmit } = useForm();
-  const onSubmit = async (data) => {
-    try {
-        // Assuming `data` is an object you want to send in the POST request
-        let response = await axios.post('https://4x7ragl0a0.execute-api.us-east-1.amazonaws.com/dev/wiki/search', data);
 
-        // Handle the response data here
-        console.log(response.data);
-    } catch (error) {
-        // Handle errors here
-        console.error(error);
+
+const onSubmit = async (data) => {
+  try {
+      let response = await fetch('https://1gr4t93t41.execute-api.us-east-2.amazonaws.com/dev/wiki', {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ wikiTitle: data.wikiTitle })
+      });
+
+      let responseData = await response.json();
+
+      console.log(responseData);
+      if (response.ok) {
+
+        navigate('/data', { state: { searchData: responseData.data.query.search[0] } });
+     
+       
+    } else {
+        // Handle unsuccessful response here
+        console.error('Error:', response.status);
     }
+      
+  } catch (error) {
+
+      console.error(error);
+  }
 };
-
-  // const onSubmit = async (data) => {
-  //   let response= await axios.post('https://4x7ragl0a0.execute-api.us-east-1.amazonaws.com/dev/wiki/search')
-  //   console.log(response);
-  //   // const apiEndpoint = "https://en.wikipedia.org/w/api.php";
-  //   // const params = {
-  //   //   action: "query",
-  //   //   list: "search",
-  //   //   srsearch: data.wikiTitle,
-  //   //   format: "json",
-  //   // };
-
-  //   // jsonp(
-  //   //   apiEndpoint + "?" + new URLSearchParams(params),
-  //   //   null,
-  //   //   (err, response) => {
-  //   //     if (err) {
-  //   //       console.error(err);
-  //   //     } else {
-  //   //       //   const pages = response.query.random;
-  //   //       //   pages.forEach(page => {
-  //   //       // console.log(response.query);
-  //   //       // words=response.query.search[0].snippet
-  //   //       //   });
-  //   //     }
-  //   //   }
-  //   // );
-  // };
 
   return (
     <div
