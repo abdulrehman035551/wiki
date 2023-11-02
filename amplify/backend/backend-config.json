@@ -1,6 +1,6 @@
 {
   "api": {
-    "wikisearch": {
+    "wikitestpy": {
       "dependsOn": [
         {
           "attributes": [
@@ -8,7 +8,7 @@
             "Arn"
           ],
           "category": "function",
-          "resourceName": "wikipidasearch1"
+          "resourceName": "wikitestpy"
         }
       ],
       "providerPlugin": "awscloudformation",
@@ -16,26 +16,27 @@
     }
   },
   "function": {
-    "wikipidasearch1": {
+    "wikitestpy": {
       "build": true,
+      "dependsOn": [],
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
     }
   },
   "parameters": {
-    "AMPLIFY_function_wikipidasearch1_deploymentBucketName": {
+    "AMPLIFY_function_wikitestpy_deploymentBucketName": {
       "usedBy": [
         {
           "category": "function",
-          "resourceName": "wikipidasearch1"
+          "resourceName": "wikitestpy"
         }
       ]
     },
-    "AMPLIFY_function_wikipidasearch1_s3Key": {
+    "AMPLIFY_function_wikitestpy_s3Key": {
       "usedBy": [
         {
           "category": "function",
-          "resourceName": "wikipidasearch1"
+          "resourceName": "wikitestpy"
         }
       ]
     }

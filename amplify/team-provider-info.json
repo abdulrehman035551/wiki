@@ -1,25 +1,25 @@
 {
   "dev": {
     "awscloudformation": {
-      "AuthRoleName": "amplify-wikipidiasearch1-dev-190055-authRole",
-      "UnauthRoleArn": "arn:aws:iam::373752731254:role/amplify-wikipidiasearch1-dev-190055-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::373752731254:role/amplify-wikipidiasearch1-dev-190055-authRole",
-      "Region": "us-east-1",
-      "DeploymentBucketName": "amplify-wikipidiasearch1-dev-190055-deployment",
-      "UnauthRoleName": "amplify-wikipidiasearch1-dev-190055-unauthRole",
-      "StackName": "amplify-wikipidiasearch1-dev-190055",
-      "StackId": "arn:aws:cloudformation:us-east-1:373752731254:stack/amplify-wikipidiasearch1-dev-190055/e8da7d70-77f5-11ee-96f1-129a67850695",
-      "AmplifyAppId": "d2ec6whuvenwin"
+      "AuthRoleName": "amplify-wiki-dev-221200-authRole",
+      "UnauthRoleArn": "arn:aws:iam::300205417350:role/amplify-wiki-dev-221200-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::300205417350:role/amplify-wiki-dev-221200-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-wiki-dev-221200-deployment",
+      "UnauthRoleName": "amplify-wiki-dev-221200-unauthRole",
+      "StackName": "amplify-wiki-dev-221200",
+      "StackId": "arn:aws:cloudformation:us-east-2:300205417350:stack/amplify-wiki-dev-221200/ca376b50-78d9-11ee-9eb2-0a7712cb13b9",
+      "AmplifyAppId": "d3i173e796qtzw"
     },
     "categories": {
       "function": {
-        "wikipidasearch1": {
-          "deploymentBucketName": "amplify-wikipidiasearch1-dev-190055-deployment",
-          "s3Key": "amplify-builds/wikipidasearch1-6d4a5776532b6e35766f-build.zip"
+        "wikitestpy": {
+          "deploymentBucketName": "amplify-wiki-dev-221200-deployment",
+          "s3Key": "amplify-builds/wikitestpy-2b31303757637a6c354e-build.zip"
         }
       },
       "api": {
-        "wikisearch": {}
+        "wikitestpy": {}
       }
     }
   }

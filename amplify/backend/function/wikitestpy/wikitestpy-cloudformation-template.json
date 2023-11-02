@@ -1,6 +1,6 @@
 {
   "AWSTemplateFormatVersion": "2010-09-09",
-  "Description": "{\"createdOn\":\"Windows\",\"createdBy\":\"Amplify\",\"createdWith\":\"12.7.1\",\"stackType\":\"function-Lambda\",\"metadata\":{}}",
+  "Description": "{\"createdOn\":\"Mac\",\"createdBy\":\"Amplify\",\"createdWith\":\"12.7.1\",\"stackType\":\"function-Lambda\",\"metadata\":{}}",
   "Parameters": {
     "CloudWatchRule": {
       "Type": "String",
@@ -47,12 +47,12 @@
         "FunctionName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "wikipidasearch1",
+            "wikitestpy",
             {
               "Fn::Join": [
                 "",
                 [
-                  "wikipidasearch1",
+                  "wikitestpy",
                   "-",
                   {
                     "Ref": "env"
@@ -89,12 +89,12 @@
         "RoleName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "wikipidiasearch1LambdaRole4ee78dc5",
+            "wikiLambdaRolee7f7e27e",
             {
               "Fn::Join": [
                 "",
                 [
-                  "wikipidiasearch1LambdaRole4ee78dc5",
+                  "wikiLambdaRolee7f7e27e",
                   "-",
                   {
                     "Ref": "env"
