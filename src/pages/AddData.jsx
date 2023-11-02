@@ -84,6 +84,7 @@ const onSubmit = async (data) => {
             </label>
             <input
               id="wikiTitle"
+              required
               style={{ width: "440px", height: "18px" }}
               {...register("wikiTitle")}
             />
